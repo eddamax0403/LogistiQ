@@ -10,7 +10,7 @@
     {% load static %}
 
   <!-- Favicons -->
-  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/logo1.png' %}" rel="icon">
   <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
 
   <!-- Fonts -->
@@ -46,7 +46,7 @@
       <a href="{% url 'home' %}" class="logo d-flex align-items-center me-auto">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename">Logis</h1>
+        <h1 class="sitename">LogistiQ</h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -85,10 +85,10 @@
   <main class="main">
 
     <!-- Page Title -->
-    <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/page-title-bg.jpg);">
+    <div class="page-title dark-background" data-aos="fade" style="background-image: url(static/assets/img/page-title-bg.jpg);">
       <div class="container position-relative">
         <h1>Services</h1>
-        <p>Esse dolorum voluptatum ullam est sint nemo et est ipsa porro placeat quibusdam quia assumenda numquam molestias.</p>
+        <p>We provide top-notch logistics solutions tailored to meet your shipping, storage, and transportation needs with efficiency and reliability.</p>
         <nav class="breadcrumbs">
           <ol>
             <li><a href="{% url 'home' %}">Home</a></li>
@@ -108,9 +108,9 @@
           <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
             <div class="icon flex-shrink-0"><i class="fa-solid fa-cart-flatbed"></i></div>
             <div>
-              <h4 class="title">Lorem Ipsum</h4>
-              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
-              <a href="#" class="readmore stretched-link"><span>Learn More</span><i class="bi bi-arrow-right"></i></a>
+              <h4 class="title">Logistics & Transportation</h4>
+              <p class="description">We ensure reliable and efficient transportation of goods, handling every shipment with care and precision to meet your delivery needs.</p>
+              <a href="{% url 'contact' %}" class="readmore stretched-link"><span>Learn More</span><i class="bi bi-arrow-right"></i></a>
             </div>
           </div>
           <!-- End Service Item -->
@@ -118,18 +118,19 @@
           <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
             <div class="icon flex-shrink-0"><i class="fa-solid fa-truck"></i></div>
             <div>
-              <h4 class="title">Dolor Sitema</h4>
-              <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
-              <a href="#" class="readmore stretched-link"><span>Learn More</span><i class="bi bi-arrow-right"></i></a>
+              <h4 class="title">Secure Warehousing</h4>
+              <p class="description">Our storage facilities provide a safe and organized environment for your goods, with real-time inventory tracking and security measures in place.
+              </p>
+              <a href="{% url 'contact' %}" class="readmore stretched-link"><span>Learn More</span><i class="bi bi-arrow-right"></i></a>
             </div>
           </div><!-- End Service Item -->
 
           <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
             <div class="icon flex-shrink-0"><i class="fa-solid fa-truck-ramp-box"></i></div>
             <div>
-              <h4 class="title">Sed ut perspiciatis</h4>
-              <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
-              <a href="#" class="readmore stretched-link"><span>Learn More</span><i class="bi bi-arrow-right"></i></a>
+              <h4 class="title">Fast & Reliable Delivery</h4>
+              <p class="description">Experience swift and hassle-free delivery services tailored to your requirements, ensuring your packages reach their destination on time.</p>
+              <a href="{% url 'contact' %}" class="readmore stretched-link"><span>Learn More</span><i class="bi bi-arrow-right"></i></a>
             </div>
           </div><!-- End Service Item -->
 
@@ -146,7 +147,7 @@
       <div class="container section-title" data-aos="fade-up">
         <span>Our Services<br></span>
         <h2>Our ServiceS</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <p>We are committed to providing efficient and reliable solutions tailored to meet your shipping and logistics needs.</p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -159,7 +160,7 @@
                 <img src="{% static 'assets/img/service-1.jpg' %}" alt="" class="img-fluid">
               </div>
               <h3>Storage</h3>
-              <p>Cumque eos in qui numquam. Aut aspernatur perferendis sed atque quia voluptas quisquam repellendus temporibus itaqueofficiis odit</p>
+              <p>We provide secure and spacious storage solutions to keep your goods safe and organized. Our facilities are equipped with modern technology to ensure efficiency and reliability.</p>
             </div>
           </div><!-- End Card Item -->
 
@@ -169,7 +170,8 @@
                 <img src="{% static 'assets/img/service-2.jpg' %}" alt="" class="img-fluid">
               </div>
               <h3><a href="#" class="stretched-link">Logistics</a></h3>
-              <p>Asperiores provident dolor accusamus pariatur dolore nam id audantium ut et iure incidunt molestiae dolor ipsam ducimus occaecati nisi</p>
+              <p>Our logistics services are designed to streamline the transportation and management of goods. We handle the entire process, from planning to delivery, ensuring smooth and timely operations.
+              </p>
             </div>
           </div><!-- End Card Item -->
 
@@ -179,7 +181,7 @@
                 <img src="{% static 'assets/img/service-3.jpg' %}" alt="" class="img-fluid">
               </div>
               <h3><a href="#" class="stretched-link">Cargo</a></h3>
-              <p>Dicta quam similique quia architecto eos nisi aut ratione aut ipsum reiciendis sit doloremque oluptatem aut et molestiae ut et nihil</p>
+              <p>We specialize in cargo transportation, ensuring that your shipments are delivered safely and efficiently. Our services cater to various industries, providing reliable and cost-effective shipping solutions.</p>
             </div>
           </div><!-- End Card Item -->
 
@@ -189,7 +191,8 @@
                 <img src="{% static 'assets/img/service-4.jpg' %}" alt="" class="img-fluid">
               </div>
               <h3><a href="#" class="stretched-link">Trucking</a></h3>
-              <p>Dicta quam similique quia architecto eos nisi aut ratione aut ipsum reiciendis sit doloremque oluptatem aut et molestiae ut et nihil</p>
+              <p>We provide reliable and efficient trucking services, ensuring your goods are transported safely and on time to their destination.
+              </p>
             </div>
           </div><!-- End Card Item -->
 
@@ -199,7 +202,7 @@
                 <img src="{% static 'assets/img/service-5.jpg' %}" alt="" class="img-fluid">
               </div>
               <h3>Packaging</h3>
-              <p>Illo consequuntur quisquam delectus praesentium modi dignissimos facere vel cum onsequuntur maiores beatae consequatur magni voluptates</p>
+              <p> Our expert packaging solutions guarantee that your products are securely packed to prevent damage during transit.</p>
             </div>
           </div><!-- End Card Item -->
 
@@ -209,7 +212,7 @@
                 <img src="{% static 'assets/img/service-6.jpg' %}" alt="" class="img-fluid">
               </div>
               <h3><a href="#" class="stretched-link">Warehousing</a></h3>
-              <p>Quas assumenda non occaecati molestiae. In aut earum sed natus eatae in vero. Ab modi quisquam aut nostrum unde et qui est non quo nulla</p>
+              <p> We offer spacious and well-organized warehousing facilities to store your goods securely, with efficient inventory management.</p>
             </div>
           </div><!-- End Card Item -->
 
@@ -226,7 +229,7 @@
       <div class="container section-title" data-aos="fade-up">
         <span>Features</span>
         <h2>Features</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <p>We provide essential logistics solutions to ensure seamless and efficient delivery services tailored to your needs.</p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -236,15 +239,14 @@
             <img src="{% static 'assets/img/features-1.jpg' %}" class="img-fluid" alt="">
           </div>
           <div class="col-md-7" data-aos="fade-up" data-aos-delay="100">
-            <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
+            <h3>Reliable and Secure Deliveries</h3>
             <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
+              We guarantee safe and efficient package handling, ensuring that your shipments arrive on time and in perfect condition.
             </p>
             <ul>
-              <li><i class="bi bi-check"></i><span> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></li>
-              <li><i class="bi bi-check"></i> <span>Duis aute irure dolor in reprehenderit in voluptate velit.</span></li>
-              <li><i class="bi bi-check"></i> <span>Ullam est qui quos consequatur eos accusamus.</span></li>
+              <li><i class="bi bi-check"></i><span> We handle every delivery with precision and care.</span></li>
+              <li><i class="bi bi-check"></i> <span>Our services are designed to provide a hassle-free experience.</span></li>
+              <li><i class="bi bi-check"></i> <span>Customer satisfaction is our top priority.</span></li>
             </ul>
           </div>
         </div><!-- Features Item -->
@@ -254,15 +256,12 @@
             <img src="{% static 'assets/img/features-2.jpg' %}" class="img-fluid" alt="">
           </div>
           <div class="col-md-7 order-2 order-md-1" data-aos="fade-up" data-aos-delay="200">
-            <h3>Corporis temporibus maiores provident</h3>
+            <h3>Reliable and Efficient Services</h3>
             <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
+             We provide high-quality services tailored to your needs. Our goal is to ensure smooth and efficient logistics solutions that meet customer demands.
             </p>
             <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum
+              We strive for excellence in every aspect of our services, ensuring reliability, speed, and customer satisfaction. Whether you need fast deliveries, safe handling, or competitive pricing, we have you covered.
             </p>
           </div>
         </div><!-- Features Item -->
@@ -272,12 +271,12 @@
             <img src="{% static 'assets/img/features-3.jpg' %}" class="img-fluid" alt="">
           </div>
           <div class="col-md-7" data-aos="fade-up">
-            <h3>Sunt consequatur ad ut est nulla consectetur reiciendis animi voluptas</h3>
-            <p>Cupiditate placeat cupiditate placeat est ipsam culpa. Delectus quia minima quod. Sunt saepe odit aut quia voluptatem hic voluptas dolor doloremque.</p>
+            <h3>Experience seamless and efficient delivery services</h3>
+            <p>We ensure that your orders reach you quickly and safely. Our dedicated team works around the clock to provide top-notch delivery services that fit your needs.</p>
             <ul>
-              <li><i class="bi bi-check"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></li>
-              <li><i class="bi bi-check"></i><span> Duis aute irure dolor in reprehenderit in voluptate velit.</span></li>
-              <li><i class="bi bi-check"></i> <span>Facilis ut et voluptatem aperiam. Autem soluta ad fugiat</span>.</li>
+              <li><i class="bi bi-check"></i> <span> Reliable and fast delivery for all orders.</span></li>
+              <li><i class="bi bi-check"></i><span>  Secure handling of your packages and food items.</span></li>
+              <li><i class="bi bi-check"></i> <span> Convenient and user-friendly order tracking.</span>.</li>
             </ul>
           </div>
         </div><!-- Features Item -->
@@ -287,15 +286,12 @@
             <img src="{% static 'assets/img/features-4.jpg' %}" class="img-fluid" alt="">
           </div>
           <div class="col-md-7 order-2 order-md-1" data-aos="fade-up">
-            <h3>Quas et necessitatibus eaque impedit ipsum animi consequatur incidunt in</h3>
+            <h3>Reliable and Efficient Shipping Solutions for Global Trade</h3>
             <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
+              At LogistiQ, we ensure smooth and efficient cargo transportation across international waters. Our modern shipping solutions guarantee timely deliveries, cost-effective operations, and enhanced supply chain management.
             </p>
             <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum
+              Whether you need container shipping, bulk cargo transport, or logistics support, we provide expert services tailored to your business. With advanced port facilities and a strong global network, we make international trade hassle-free.
             </p>
           </div>
         </div><!-- Features Item -->

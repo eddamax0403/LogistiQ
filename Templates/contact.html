@@ -10,7 +10,7 @@
     {% load static %}
 
   <!-- Favicons -->
-  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/logo1.png' %}" rel="icon">
   <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
 
   <!-- Fonts -->
@@ -46,7 +46,7 @@
       <a href="index.html" class="logo d-flex align-items-center me-auto">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename">Logis</h1>
+        <h1 class="sitename">LogistiQ</h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -85,10 +85,10 @@
   <main class="main">
 
     <!-- Page Title -->
-    <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/page-title-bg.jpg);">
+    <div class="page-title dark-background" data-aos="fade" style="background-image: url(static/assets/img/page-title-bg.jpg);">
       <div class="container position-relative">
         <h1>Contact</h1>
-        <p>Esse dolorum voluptatum ullam est sint nemo et est ipsa porro placeat quibusdam quia assumenda numquam molestias.</p>
+        <p>Have any questions or need assistance? Get in touch with us, and our team will be happy to help. Whether you're looking for more information about our services or need support, we're just a message away.</p>
         <nav class="breadcrumbs">
           <ol>
             <li><a href="{% url 'home' %}">Home</a></li>
@@ -137,7 +137,8 @@
           </div>
 
           <div class="col-lg-8">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+            <form method="post"  data-aos="fade-up" data-aos-delay="200">
+                {% csrf_token %}
               <div class="row gy-4">
 
                 <div class="col-md-6">

@@ -10,7 +10,7 @@
     {% load static %}
 
   <!-- Favicons -->
-  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/logo1.png' %}" rel="icon">
   <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
 
   <!-- Fonts -->
@@ -92,13 +92,13 @@
       <div class="container">
         <div class="row gy-4 d-flex justify-content-between">
           <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
-            <h2 data-aos="fade-up">Your Lightning Fast Delivery Partner</h2>
-            <p data-aos="fade-up" data-aos-delay="100">Facere distinctio molestiae nisi fugit tenetur repellat non praesentium nesciunt optio quis sit odio nemo quisquam. eius quos reiciendis eum vel eum voluptatem eum maiores eaque id optio ullam occaecati odio est possimus vel reprehenderit</p>
+            <h2 data-aos="fade-up">Reliable, fast, and secure freight services tailored for your business.</h2>
+            <p data-aos="fade-up" data-aos-delay="100">From small packages to large freight, we provide customized shipping solutions that meet your needs. Our smart logistics technology and expert handling guarantee secure, on-time deliveries every time.</p>
 
             <form  class="form-search d-flex align-items-stretch mb-3" data-aos="fade-up" data-aos-delay="200" method="post">
                 {% csrf_token %}
-              <input type="text" name="zip" class="form-control" placeholder="Your ZIP code or City. e.g. New York">
-              <button type="submit" class="btn btn-primary">Search</button>
+              <input type="text" name="zip_code" class="form-control" placeholder="Enter your ZIP code or City. e.g. New York">
+              <button type="submit" class="btn btn-primary">Check Availability</button>
             </form>
 
             <div class="row gy-4" data-aos="fade-up" data-aos-delay="300">
@@ -156,8 +156,9 @@
           <div class="col-xl-10">
             <div class="text-center">
               <h3>Call To Action</h3>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              <a class="cta-btn" href="#">Call To Action</a>
+              <p><h2>Fast, Reliable, and Affordable Shipping Services</h2>
+               <p>Whether you're sending a package across town or across the world, we've got you covered. Our seamless shipping solutions ensure **safe, timely, and cost-effective** delivery. Enjoy real-time tracking, flexible shipping options, and **24/7 customer support**.  </p>
+              <a class="cta-btn" href="{% url 'contact' %}">Call To Action</a>
             </div>
           </div>
         </div>
@@ -195,14 +196,14 @@
             <div class="swiper-slide">
               <div class="testimonial-item">
                 <img src="{% static 'assets/img/testimonials/testimonials-1.jpg' %}" class="testimonial-img" alt="">
-                <h3>Saul Goodman</h3>
-                <h4>Ceo &amp; Founder</h4>
+                <h3>David O.</h3>
+                <h4>Entrepreneur, Nairobi</h4>
                 <div class="stars">
                   <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</span>
+                  <span>Incredible service! My package arrived even earlier than expected. The tracking updates were super helpful, and customer support was amazing!</span>
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
@@ -211,14 +212,14 @@
             <div class="swiper-slide">
               <div class="testimonial-item">
                 <img src="{% static 'assets/img/testimonials/testimonials-2.jpg' %}" class="testimonial-img" alt="">
-                <h3>Sara Wilsson</h3>
-                <h4>Designer</h4>
+                <h3>Xhengyo Z.</h3>
+                <h4>E-Commerce Business Owner, Mombasa</h4>
                 <div class="stars">
                   <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.</span>
+                  <span>"I’ve used many shipping companies before, but this one stands out! Fast, secure, and very affordable. I highly recommend them!</span>
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
@@ -227,14 +228,14 @@
             <div class="swiper-slide">
               <div class="testimonial-item">
                 <img src="{% static 'assets/img/testimonials/testimonials-3.jpg' %}" class="testimonial-img" alt="">
-                <h3>Jena Karlis</h3>
-                <h4>Store Owner</h4>
+                <h3>Jane M.</h3>
+                <h4>Online Retailer,Lagos</h4>
                 <div class="stars">
                   <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.</span>
+                  <span>Ever since I partnered with this shipping company for my online store, my customers have been so happy! Deliveries are always on time, and tracking is reliable.</span>
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
@@ -244,13 +245,13 @@
               <div class="testimonial-item">
                 <img src="{% static 'assets/img/testimonials/testimonials-4.jpg' %}" class="testimonial-img" alt="">
                 <h3>Matt Brandon</h3>
-                <h4>Freelancer</h4>
+                <h4>Freelancer,Capetown</h4>
                 <div class="stars">
                   <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.</span>
+                  <span>The best part about this shipping company is the real-time tracking. I always knew where my package was, and it arrived just as promised!</span>
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
@@ -258,15 +259,15 @@
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="{% static 'assets/img/testimonials/testimonials-5.jpg' %}" class="testimonial-img" alt="">
-                <h3>John Larson</h3>
-                <h4>Entrepreneur</h4>
+                <img src="{% static 'assets/img/testimonials/test6.png' %}" class="testimonial-img" alt="">
+                <h3>Kyla D.</h3>
+                <h4>Personal Shopper,Kigali</h4>
                 <div class="stars">
                   <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.</span>
+                  <span>I was worried about shipping fragile items, but they handled everything with care! My package arrived safely and on time. Highly recommended!</span>
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>

@@ -10,7 +10,7 @@
     {% load static %}
 
   <!-- Favicons -->
-  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/logo1.png' %}" rel="icon">
   <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
 
   <!-- Fonts -->
@@ -46,7 +46,7 @@
       <a href="{% url 'home' %}" class="logo d-flex align-items-center me-auto">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename">Logis</h1>
+        <h1 class="sitename">LogistiQ</h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -85,10 +85,10 @@
   <main class="main">
 
     <!-- Page Title -->
-    <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/page-title-bg.jpg);">
+    <div class="page-title dark-background" data-aos="fade" style="background-image: url(static/assets/img/page-title-bg.jpg);">
       <div class="container position-relative">
         <h1>Pricing</h1>
-        <p>Esse dolorum voluptatum ullam est sint nemo et est ipsa porro placeat quibusdam quia assumenda numquam molestias.</p>
+        <p>Explore our flexible pricing plans tailored to meet your shipping needs.</p>
         <nav class="breadcrumbs">
           <ol>
             <li><a href="{% url 'home' %}">Home</a></li>
@@ -105,7 +105,7 @@
       <div class="container section-title" data-aos="fade-up">
         <span>Pricing</span>
         <h2>Pricing</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <p>We offer transparent and competitive pricing to ensure you get the best value for your shipping services. Choose a plan that suits your business requirements of full containers.</p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -114,46 +114,43 @@
 
           <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
             <div class="pricing-item">
-              <h3>Free Plan</h3>
-              <h4><sup>$</sup>0<span> / month</span></h4>
+              <h3>Economy Shipping</h3>
+              <h4><sup>$</sup>15<span> / shipment</span></h4>
               <ul>
-                <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
-                <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
-                <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
-                <li class="na"><i class="bi bi-x"></i> <span>Pharetra massa massa ultricies</span></li>
-                <li class="na"><i class="bi bi-x"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+                <li><i class="bi bi-check"></i> <span>Standard delivery (3-7 days)</span></li>
+                <li><i class="bi bi-check"></i> <span>Basic tracking</span></li>
+                <li class="na"><i class="bi bi-x"></i> <span>No insurance coverage</span></li>
+                <li class="na"><i class="bi bi-x"></i> <span>Limited customer support</span></li>
               </ul>
-              <a href="#" class="buy-btn">Buy Now</a>
+              <a href="{% url 'pay' %}" class="buy-btn">Ship with Economy</a>
             </div>
           </div><!-- End Pricing Item -->
 
           <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="200">
             <div class="pricing-item featured">
-              <h3>Business Plan</h3>
-              <h4><sup>$</sup>29<span> / month</span></h4>
+              <h3>Priority Shipping</h3>
+              <h4><sup>$</sup>25<span> / shipment</span></h4>
               <ul>
-                <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
-                <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
-                <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
-                <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
-                <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+                <li><i class="bi bi-check"></i> <span>Faster delivery (1-3 days)</span></li>
+                <li><i class="bi bi-check"></i> <span>Advanced tracking and notifications</span></li>
+                <li><i class="bi bi-check"></i> <span>Partial insurance coverage</span></li>
+                <li><i class="bi bi-check"></i> <span>Dedicated customer support</span></li>
               </ul>
-              <a href="#" class="buy-btn">Buy Now</a>
+              <a href="{% url 'pay' %}" class="buy-btn">Choose Priority</a>
             </div>
           </div><!-- End Pricing Item -->
 
           <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="300">
             <div class="pricing-item">
-              <h3>Developer Plan</h3>
-              <h4><sup>$</sup>49<span> / month</span></h4>
+              <h3>Express Shipping </h3>
+              <h4><sup>$</sup>45<span> / shipment</span></h4>
               <ul>
-                <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
-                <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
-                <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
-                <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
-                <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+                <li><i class="bi bi-check"></i> <span>Same-day or next-day delivery</span></li>
+                <li><i class="bi bi-check"></i> <span>Real-time GPS tracking</span></li>
+                <li><i class="bi bi-check"></i> <span>Full insurance coverage</span></li>
+                <li><i class="bi bi-check"></i> <span>24/7 priority customer support</span></li>
               </ul>
-              <a href="#" class="buy-btn">Buy Now</a>
+              <a href="{% url 'pay' %}" class="buy-btn">Get Express Delivery</a>
             </div>
           </div><!-- End Pricing Item -->
 
@@ -163,78 +160,6 @@
 
     </section><!-- /Pricing Section -->
 
-    <!-- Alt Pricing Section -->
-    <section id="alt-pricing" class="alt-pricing section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <span>Alt Pricing<br></span>
-        <h2>Alt Pricing</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row gy-4 pricing-item" data-aos="fade-up" data-aos-delay="100">
-          <div class="col-lg-3 d-flex align-items-center justify-content-center">
-            <h3>Free Plan</h3>
-          </div>
-          <div class="col-lg-3 d-flex align-items-center justify-content-center">
-            <h4><sup>$</sup>0<span> / month</span></h4>
-          </div>
-          <div class="col-lg-3 d-flex align-items-center justify-content-center">
-            <ul>
-              <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
-              <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
-              <li class="na"><i class="bi bi-x"></i> <span>Pharetra massa massa ultricies</span></li>
-            </ul>
-          </div>
-          <div class="col-lg-3 d-flex align-items-center justify-content-center">
-            <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
-          </div>
-        </div><!-- End Pricing Item -->
-
-        <div class="row gy-4 pricing-item featured mt-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="col-lg-3 d-flex align-items-center justify-content-center">
-            <h3>Business Plan</h3>
-          </div>
-          <div class="col-lg-3 d-flex align-items-center justify-content-center">
-            <h4><sup>$</sup>29<span> / month</span></h4>
-          </div>
-          <div class="col-lg-3 d-flex align-items-center justify-content-center">
-            <ul>
-              <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
-              <li><i class="bi bi-check"></i> <strong>Nec feugiat nisl pretium</strong></li>
-              <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
-            </ul>
-          </div>
-          <div class="col-lg-3 d-flex align-items-center justify-content-center">
-            <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
-          </div>
-        </div><!-- End Pricing Item -->
-
-        <div class="row gy-4 pricing-item mt-4" data-aos="fade-up" data-aos-delay="300">
-          <div class="col-lg-3 d-flex align-items-center justify-content-center">
-            <h3>Developer Plan</h3>
-          </div>
-          <div class="col-lg-3 d-flex align-items-center justify-content-center">
-            <h4><sup>$</sup>49<span> / month</span></h4>
-          </div>
-          <div class="col-lg-3 d-flex align-items-center justify-content-center">
-            <ul>
-              <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
-              <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
-              <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
-            </ul>
-          </div>
-          <div class="col-lg-3 d-flex align-items-center justify-content-center">
-            <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
-          </div>
-        </div><!-- End Pricing Item -->
-
-      </div>
-
-    </section><!-- /Alt Pricing Section -->
 
   </main>
 
@@ -244,7 +169,7 @@
       <div class="row gy-4">
         <div class="col-lg-5 col-md-12 footer-about">
           <a href="{% url 'home' %}" class="logo d-flex align-items-center">
-            <span class="sitename">Logis</span>
+            <span class="sitename">LogistiQ</span>
           </a>
           <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
           <div class="social-links d-flex mt-4">
