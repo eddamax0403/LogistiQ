@@ -5,3 +5,4 @@ from Logiapp.models import *
 
 admin.site.register(Contact)
 admin.site.register(Transaction)
+admin.site.register(ServiceRequest)

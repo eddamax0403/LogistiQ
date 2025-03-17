@@ -162,3 +162,6 @@ def transactions_list(request):
     return render(request, 'transactions.html', {'transactions': transactions})
 
 
+
+def book(request):
+    return render(request,'booksevice.html')
