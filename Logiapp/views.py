@@ -41,8 +41,6 @@ def contact(request):
         return render(request, 'contact.html')
 
 
-def getquote(request):
-    return render(request,'get-a-quote.html')
 
 def pricing(request):
     return render(request,'pricing.html')

@@ -11,7 +11,7 @@ urlpatterns = [
     path('services/',views.services,name='services'),
     path('servicedetails/',views.servicedetails,name='servicedetails'),
     path('starter/',views.starter,name='starter'),
-    path('getquote/',views.getquote,name='getquote'),
+
     path('login/',views.login_view,name='login'),
     path('',views.register,name='register'),
 
