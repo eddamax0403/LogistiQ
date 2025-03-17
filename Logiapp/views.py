@@ -1,6 +1,8 @@
 import json
 from django.contrib.auth import authenticate,login
-from django.contrib.sites import requests
+
+import requests
+
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib import messages

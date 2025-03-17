@@ -1,9 +1,7 @@
 {% extends 'starter-page.html' %}
 
 {% block content %}
-    {% load static %}
-
-<!-- Ensure Bootstrap and Font Awesome are included in your base template -->
+	<!-- Ensure Bootstrap and Font Awesome are included in your base template -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
 <div class="container mt-5">
@@ -21,7 +19,7 @@
                             <label for="phone" class="form-label">Phone Number:</label>
                             <div class="input-group">
                                 <span class="input-group-text"><i class="fas fa-phone"></i></span>
-                                <input type="number" class="form-control" id="phone" name="phone" value="254" placeholder="Enter Phone Number" required>
+                                <input type="number" class="form-control" id="phone" name="phone" value="254" placeholder="Enter Phone Number" required="">
                             </div>
                         </div>
 
@@ -30,7 +28,7 @@
                             <label for="amount" class="form-label">Amount:</label>
                             <div class="input-group">
                                 <span class="input-group-text"><i class="fas fa-coins"></i></span>
-                                <input type="text" class="form-control" id="amount" name="amount" placeholder="Enter Amount" required>
+                                <input type="text" class="form-control" id="amount" name="amount" placeholder="Enter Amount" required="">
                             </div>
                         </div>
 

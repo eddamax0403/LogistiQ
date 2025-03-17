@@ -1,15 +1,15 @@
 
 import json
 
-from django.contrib.sites import requests
+import requests
 from requests.auth import HTTPBasicAuth
 from datetime import datetime
 import base64
 
 
 class MpesaC2bCredential:
-    consumer_key = 'zrboAgmNWKFLSG0NTxUVl3cwCesUA4o9GGvmg3FIJU24PfJA'
-    consumer_secret = 'TKoCGAUP3wBwb7L9KFktZD753TE9QcxtZmzLbNcYMD0pqVuwQrJi7VNHXm0KS2gd'
+    consumer_key = 'H10wNd8rja4AxXc2XfJw6YjUwyrGrh9TQ8EvfzqwxOWHAQ8D'
+    consumer_secret = 'oyt8JWGGUjoWqAdDWcpdAr6gGGwYhDeMC7qugLrUeDuDoCCatDIPIRgaEwS10GjR'
     api_URL = 'https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials'
 
 
