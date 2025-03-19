@@ -25,7 +25,7 @@ class Transaction(models.Model):
 
 
 
-class ServiceRequest(models.Model):
+class ServiceRequest1(models.Model):
     SERVICE_CHOICES = [
         ('store', 'Storage'),
         ('logistics', 'Logistics'),
@@ -44,6 +44,7 @@ class ServiceRequest(models.Model):
         default='web_dev'
     )
     request_date = models.DateField(auto_now_add=True)
+    image = models.ImageField(upload_to='bookings/')  # New field
 
     def __str__(self):
         return f"{self.full_name} - {self.get_service_display()}"

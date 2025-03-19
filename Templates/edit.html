@@ -1,0 +1,123 @@
+{% extends 'starter-page.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Appointment Section -->
+<section id="appointment" class="appointment section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Edit Booking</h2>
+    <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+  </div><!-- End Section Title -->
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+
+      <!-- Upload Image Section -->
+      <div class="form-group mt-3">
+        <label>Upload Image:</label>
+        <input type="file" name="image" class="form-control" required>
+      </div>
+
+      <!-- User Information Section -->
+      <div class="row">
+        <div class="col-md-4 form-group">
+          <input type="text" name="name" value="{{ booking.full_name }}" class="form-control" id="name" placeholder="Your Name" required>
+        </div>
+        <div class="col-md-4 form-group mt-3 mt-md-0">
+          <input type="email" class="form-control" name="email" value="{{ booking.email }}" id="email" placeholder="Your Email" required>
+        </div>
+        <div class="col-md-4 form-group mt-3 mt-md-0">
+          <input type="tel" class="form-control" name="phone_number" value="{{ booking.phone_number }}" id="phone" placeholder="Your Phone" required>
+        </div>
+      </div>
+
+      <!-- Booking Information Section -->
+      <div class="row">
+        <div class="col-md-4 form-group mt-3">
+          <input type="datetime-local" name="date" value="" class="form-control" id="date" placeholder="Booking Date" required>
+        </div>
+        <div class="col-md-4 form-group mt-3">
+          <select name="service" id="service" class="form-select" required>
+            <option value="">Choose Service</option>
+            <option value="Storage" {% if booking.service == "Storage" %}selected{% endif %}>Storage</option>
+            <option value="Logistics" {% if booking.service == "Logistics" %}selected{% endif %}>Logistics</option>
+            <option value="Cargo" {% if booking.service == "Cargo" %}selected{% endif %}>Cargo</option>
+            <option value="Trucking" {% if booking.service == "Trucking" %}selected{% endif %}>Trucking</option>
+            <option value="Packaging" {% if booking.service == "Packaging" %}selected{% endif %}>Packaging</option>
+            <option value="Warehousing" {% if booking.service == "Warehousing" %}selected{% endif %}>Warehousing</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Submit Section -->
+      <div class="mt-3">
+        <div class="loading">Loading</div>
+        <div class="error-message"></div>
+        <div class="sent-message">Your booking request has been sent successfully. Thank you!</div>
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary">Update Booking</button>
+        </div>
+      </div>
+
+    </form>
+
+  </div>
+
+</section><!-- /Appointment Section -->
+
+<!-- Custom CSS Styles -->
+<style>
+  /* Custom styling for the form */
+  #appointment {
+    padding: 60px 0;
+  }
+  .section-title h2 {
+    font-size: 36px;
+    color: #333;
+    font-weight: 600;
+  }
+  .section-title p {
+    font-size: 16px;
+    color: #777;
+  }
+  .form-group {
+    margin-bottom: 20px;
+  }
+  .form-control, .form-select {
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+    width: 100%;
+  }
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+  .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+  }
+  .loading {
+    display: none;
+    font-size: 16px;
+  }
+  .error-message {
+    display: none;
+    color: red;
+    font-size: 14px;
+  }
+  .sent-message {
+    display: none;
+    color: green;
+    font-size: 14px;
+  }
+</style>
+
+{% endblock %}

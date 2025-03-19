@@ -1998,6 +1998,22 @@ section,
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
 
+
+.book-btn {
+    background-color: #00008B !important;
+    border-color: #00008B !important;
+    color: white !important;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Adds a shadow */
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+.book-btn:hover {
+    background-color: #000070 !important; /* Darker blue on hover */
+    border-color: #000070 !important;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* Increased shadow on hover */
+    transform: scale(1.05); /* Slightly enlarges the button */
+}
+
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/

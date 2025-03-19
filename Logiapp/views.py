@@ -2,12 +2,14 @@ import json
 from django.contrib.auth import authenticate,login
 
 import requests
+from django.core.files.base import ContentFile
+from django.core.files.storage import default_storage
 
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib import messages
 
-from Logiapp.models import Contact, Transaction
+from Logiapp.models import *
 from Logiapp.credentials import LipanaMpesaPpassword, MpesaAccessToken
 from django.shortcuts import render, redirect,get_object_or_404
 from requests.auth import HTTPBasicAuth
@@ -164,4 +166,93 @@ def transactions_list(request):
 
 
 def book(request):
-    return render(request,'booksevice.html')
+    if request.method == "POST":
+
+        image = request.FILES.get('image')
+
+        if image:  # Log file upload
+            print(f"Uploaded File Name: {image.name}")
+            print(f"File Size: {image.size} bytes")
+
+            # Optional: Save to disk manually (debugging)
+            path = default_storage.save(f"bookings/{image.name}", ContentFile(image.read()))
+            print(f"File saved at: {path}")
+
+        serviceme = ServiceRequest1(
+            full_name=request.POST['full_name'],
+            email=request.POST['email'],
+            phone_number=request.POST['phone_number'],
+            service=request.POST['service'],
+            request_date=request.POST['request_date'],
+            image = image  # Assign image
+
+        )
+        serviceme.save()
+        return redirect('/bookings')
+
+    else:
+        return render(request, 'booksevice.html')
+
+
+def bookings(request):
+    all = ServiceRequest1.objects.all()
+    return render(request,'bookings.html',{'all':all})
+
+
+def delete(request,id):
+    deleteservice = ServiceRequest1.objects.get(id=id)
+    deleteservice.delete()
+    return redirect('/bookings')
+
+
+def edit(request,id):
+    booking = get_object_or_404(ServiceRequest1,id=id)
+    if request.method == "POST":
+        booking.full_name = request.POST.get('full_name')
+        booking.email = request.POST.get('email')
+        booking.phone_number = request.POST.get('phone_number')
+        booking.request_date = request.POST.get('request_date')
+        booking.service= request.POST.get('service')
+        # Handle image update
+        if 'image' in request.FILES:
+            if booking.image:  # Delete old image
+                booking.image.delete()
+            booking.image = request.FILES['image']
+
+        booking.save()
+        return redirect('/bookings')
+    else:
+        return render(request,'edit.html',{'booking':booking})
+
+
+def admin_dashboard(request):
+    all1 = ServiceRequest1.objects.all()
+    return render(request,'admindashboard.html',{'all1':all1})
+
+
+def admin_login(request):
+    # Admin credentials
+    admin_username = "eddy"
+    admin_email = "mwanziaedwin5@gmail.com"
+    admin_password = "eddamax141#"
+
+    # Ensure admin user exists
+    if not User.objects.filter(username=admin_username).exists():
+        User.objects.create_superuser(username=admin_username, email=admin_email, password=admin_password)
+        print("Superuser created successfully!")
+
+    if request.method == "POST":
+        username = request.POST.get("username")
+        password = request.POST.get("password")
+
+        user = authenticate(request, username=username, password=password)
+
+        if user is not None and user.username == admin_username:
+            login(request, user)
+            messages.success(request, "Welcome Admin!")
+            return redirect('/admindashboard')  # Redirect to transactions page
+        else:
+            messages.error(request, "Invalid credentials! Only admin can log in.")
+            return redirect('/adminlogin')  # Redirect back to login page
+
+    return render(request, 'adminlogin.html')
