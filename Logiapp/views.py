@@ -1,5 +1,5 @@
 import json
-from django.contrib.auth import authenticate,login
+from django.contrib.auth import authenticate, login, logout
 
 import requests
 from django.core.files.base import ContentFile
@@ -74,6 +74,10 @@ def login_view(request):
 
     return render(request, 'login.html')
 
+def user_logout(request):
+    logout(request)  # Logs out the user
+    return redirect('login')  # Redirect to the login page (update the URL name if different)
+
 
 def register(request):
     """ Show the registration form """
@@ -136,8 +140,8 @@ def stk(request):
             "PartyB": LipanaMpesaPpassword.Business_short_code,
             "PhoneNumber": phone,
             "CallBackURL": "https://sandbox.safaricom.co.ke/mpesa/",
-            "AccountReference": "Apen Softwares",
-            "TransactionDesc": "Web Development Charges"
+            "AccountReference": "LogistiQ",
+            "TransactionDesc": "Shipping/Service Charges"
         }
         response = requests.post(api_url, json=request_data, headers=headers)
 
@@ -202,7 +206,7 @@ def bookings(request):
 def delete(request,id):
     deleteservice = ServiceRequest1.objects.get(id=id)
     deleteservice.delete()
-    return redirect('/bookings')
+    return redirect('/admindashboard')
 
 
 def edit(request,id):

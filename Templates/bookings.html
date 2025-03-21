@@ -3,32 +3,33 @@
 {% load static %}
 
 {% block content %}
-
+    <br>
     <h1 class="text-center">All Bookings</h1>
+    <br>
 
    <div class="container">
     <div class="d-flex gap-3 flex-wrap">
     {% for x in all %}
 
-        <div class="card w-30 shadow-lg p-3 ">
+        <div class="card w-30 shadow-lg p-3 mb-3">
 
 
          {% if x.image %}
         <img src="{{ x.image.url }}" class="img-fluid mb-2" alt="Booking Image" style="height: 200px; object-fit: cover;">
         {% endif %}
 
-        <p class="text-primary fw-bold">{{ x.full_name }}</p>
-        <p><strong>Email:</strong> {{ x.email }}</p>
-        <p><strong>Phone:</strong> {{ x.phone_number }}</p>
-        <p><strong>Date:</strong> {{ x.request_date }}</p>
-        <p><strong>Service:</strong> {{ x.service }}</p>
+        <p class="card-title text-primary fw-bold">{{ x.full_name }}</p>
+        <p class="card-text"><i class="bi bi-envelope-fill text-secondary"></i><strong>Email:</strong> {{ x.email }}</p>
+        <p class="card-text"><i class="bi bi-telephone-fill text-secondary"></i><strong>Phone:</strong> {{ x.phone_number }}</p>
+        <p class="card-text"><i class="bi bi-calendar-event-fill text-secondary"></i> <strong>Date:</strong> {{ x.request_date }}</p>
+        <p class="card-text"><i class="bi bi-truck text-secondary"></i><strong>Service:</strong> {{ x.service }}</p>
 
-        <p>
-            <a href="{% url 'pay' %}" class="text-success ms-3">
-                    <i class="bi bi-credit-card"></i>Pay
-                </a>
-        </p>
 
+        <div class="d-flex justify-content-center align-items-center">
+    <a href="{% url 'pay' %}" class="text-success ms-3">
+        <i class="bi bi-credit-card"></i> Pay
+    </a>
+        </div>
 
         </div>
 

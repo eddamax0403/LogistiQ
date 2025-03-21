@@ -2014,6 +2014,19 @@ section,
     transform: scale(1.05); /* Slightly enlarges the button */
 }
 
+
+.bg-image {
+    background-image: url("{% static 'images/shipping_booking_bg.png' %}"); /* Use new background image */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
